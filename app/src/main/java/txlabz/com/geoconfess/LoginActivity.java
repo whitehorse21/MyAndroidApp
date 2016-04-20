@@ -1,5 +1,6 @@
 package txlabz.com.geoconfess;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import txlabz.com.geoconfess.views.CustomProgressDialog;
 import txlabz.com.geoconfess.web.AppApiController;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -25,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button loginButton;
     View usernameDivider;
     View passwordDivider;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         loginButton.setOnClickListener(this);
 
+        progressDialog = CustomProgressDialog.ctor(this);
         setOnTouchListenerForPassword(password);
         setOnTouchListenerForUserName(username);
         handleOnTouchUserName();
@@ -56,9 +60,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.loginButton:
                 Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().oathToken("password", username.getText().toString(), password.getText().toString(),
                         "android", "3kjh123iu42i314g123");
+                progressDialog.show();
                 oathAPICall.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        progressDialog.dismiss();
                         if(response.isSuccessful()) {
                             DialogUtility.showDialog(LoginActivity.this, "Message", "Success.");
                         } else {
@@ -68,6 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        progressDialog.dismiss();
                         DialogUtility.showDialog(LoginActivity.this, "Message", "Error.");
                     }
                 });
