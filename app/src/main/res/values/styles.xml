@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- EDIT TEXT -->
+    <style name="AppTheme.Widget.EditText" parent="android:Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/default_edit_text_height</item>
+        <item name="android:background">@drawable/edittext_bg_color</item>
+        <item name="android:textColorHint">@color/colorGreyTextHint</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:paddingLeft">@dimen/default_padding_medium</item>AdventPro-SemiBold.ttf
+        <item name="android:paddingRight">@dimen/default_padding_medium</item>
+        <item name="android:layout_marginLeft">@dimen/default_padding_xlarge</item>
+        <item name="android:layout_marginRight">@dimen/default_padding_xlarge</item>
+        <item name="android:singleLine">true</item>
+
+    </style>
+
+    <style name="AppTheme.Widget.EditText.Helvetica" parent="AppTheme.Widget.EditText">
+        <item name="fontPath">fonts/HelveticaNeueLTCom-Roman.ttf</item>
+    </style>
+
+
+    <!-- BUTTON -->
+    <style name="AppTheme.Widget.Button" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:background">@drawable/btn_bg_red</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_medium_4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/default_padding_xlarge</item>
+        <item name="android:layout_marginRight">@dimen/default_padding_xlarge</item>
+    </style>
+
+    <style name="AppTheme.Widget.Button.Helvetica" parent="AppTheme.Widget.Button">
+        <item name="fontPath">fonts/HelveticaNeueLTCom-Roman.ttf</item>
+    </style>
+
+    <style name="AppTheme.Widget.Button.adventpro" parent="AppTheme.Widget.Button">
+        <item name="fontPath">fonts/AdventPro-SemiBold.ttf</item>
+    </style>
+
+    <!-- TEXT VIEW -->
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGreyText</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView.Helvetica" parent="AppTheme.Widget.TextView">
+        <item name="fontPath">fonts/HelveticaNeueLTCom-Roman.ttf</item>
+    </style>
+</resources>
