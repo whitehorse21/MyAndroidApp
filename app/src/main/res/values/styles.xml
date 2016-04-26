@@ -50,6 +50,17 @@
         <item name="fontPath">fonts/AdventPro-SemiBold.ttf</item>
     </style>
 
+    <style name="AppTheme.Widget.Button.Social" parent="AppTheme.Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_medium_4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/default_padding_xlarge</item>
+        <item name="android:layout_marginRight">@dimen/default_padding_xlarge</item>
+        <item name="fontPath">fonts/AdventPro-SemiBold.ttf</item>
+    </style>
+
     <!-- TEXT VIEW -->
     <style name="AppTheme.Widget.TextView" parent="android:Widget.TextView">
         <item name="android:textColor">@color/colorGreyText</item>

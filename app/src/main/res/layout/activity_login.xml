@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,71 +7,86 @@
     tools:context="txlabz.com.geoconfess.LoginActivity"
     android:background="@android:color/white">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/actionbar_size"
-        android:orientation="vertical"
-        android:background="@color/colorPrimary"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actionbar_size"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:src="@drawable/geoconfess"/>
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/geoconfess"/>
 
-    </LinearLayout>
-    <EditText
-        android:id="@+id/username"
-        android:hint="@string/prompt_email"
-        style="@style/AppTheme.Widget.EditText.Helvetica"
-        android:drawableLeft="@drawable/icon_identification_off"
-        android:drawablePadding="20dp"
-        android:layout_marginTop="20dp"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/username"
+                android:hint="@string/prompt_email"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:drawableLeft="@drawable/icon_identification_off"
+                android:drawablePadding="20dp"
+                android:layout_marginTop="20dp"/>
 
-    <View
-        android:id="@+id/usernameDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="@dimen/default_padding_xlarge"
-        android:layout_marginRight="@dimen/default_padding_xlarge"
-        android:background="@color/colorGreyTextHint"/>
+            <View
+                android:id="@+id/usernameDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
 
-    <EditText
-        android:id="@+id/password"
-        android:hint="@string/prompt_password"
-        style="@style/AppTheme.Widget.EditText.Helvetica"
-        android:drawableLeft="@drawable/icon_password_off"
-        android:drawablePadding="20dp"
-        android:inputType="textPassword"
-        android:layout_marginTop="3dp"/>
+            <EditText
+                android:id="@+id/password"
+                android:hint="@string/prompt_password"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:drawableLeft="@drawable/icon_password_off"
+                android:drawablePadding="20dp"
+                android:inputType="textPassword"
+                android:layout_marginTop="3dp"/>
 
-    <View
-        android:id="@+id/passwordDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="@dimen/default_padding_xlarge"
-        android:layout_marginRight="@dimen/default_padding_xlarge"
-        android:background="@color/colorGreyTextHint"/>
+            <View
+                android:id="@+id/passwordDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
 
-    <Button
-        android:id="@+id/loginButton"
-        style="@style/AppTheme.Widget.Button.adventpro"
-        android:text="SE CONNECTER"
-        android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/AppTheme.Widget.Button.adventpro"
+                android:text="SE CONNECTER"
+                android:layout_marginTop="20dp"/>
 
-    <TextView
-        android:id="@+id/label"
-        style="@style/AppTheme.Widget.TextView.Helvetica"
-        android:text="Mot de passe oublie ?"
-        android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/label"
+                style="@style/AppTheme.Widget.TextView.Helvetica"
+                android:text="Mot de passe oublie ?"
+                android:layout_marginTop="10dp"/>
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+            <!-- Login progress -->
+            <ProgressBar
+                android:id="@+id/login_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
 
-</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        layout="@layout/layout_footer"
+        />
+</RelativeLayout>

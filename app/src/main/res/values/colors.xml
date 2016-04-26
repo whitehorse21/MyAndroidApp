@@ -8,4 +8,9 @@
     <color name="colorGreyTextHint">#979896</color>
 
     <color name="white">#ffffff</color>
+    
+    <color name="red">#cd4132</color>
+    <color name="darkRed">#d25446</color>
+    <color name="blue">#32528d</color>
+    <color name="darkBlue">#355797</color>
 </resources>
