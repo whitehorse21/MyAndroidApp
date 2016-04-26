@@ -135,5 +135,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         passwordDivider.setVisibility(View.GONE);
         usernameDivider.setVisibility(View.VISIBLE);
     }
+
+    
 }
 
