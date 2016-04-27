@@ -3,6 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -40,6 +42,16 @@
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginLeft">@dimen/default_padding_xlarge</item>
         <item name="android:layout_marginRight">@dimen/default_padding_xlarge</item>
+    </style>
+
+    <style name="AppTheme.Widget.Button.Full" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:background">@drawable/btn_bg_red</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font_size_medium_4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontPath">fonts/AdventPro-SemiBold.ttf</item>
     </style>
 
     <style name="AppTheme.Widget.Button.Helvetica" parent="AppTheme.Widget.Button">

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include
+                layout="@layout/layout_toolbar_red"
+                />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/et_surname"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:hint="Nom"
+                />
+            <View
+                android:id="@+id/surnameDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:hint="Prénom"
+                />
+            <View
+                android:id="@+id/nameDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
+            <EditText
+                android:id="@+id/et_emil"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:layout_marginTop="5dp"
+                android:hint="Adresse mail"
+                />
+            <View
+                android:id="@+id/emailDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
+            <EditText
+                android:id="@+id/et_telephone"
+                style="@style/AppTheme.Widget.EditText.Helvetica"
+                android:layout_marginTop="5dp"
+                android:hint="Téléphone"
+                />
+            <View
+                android:id="@+id/telephoneDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/default_padding_xlarge"
+                android:layout_marginRight="@dimen/default_padding_xlarge"
+                android:background="@color/colorGreyTextHint"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <include
+        layout="@layout/layout_footer"
+        />
+    <Button
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.Widget.Button.Full"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/grey_btn_selector"
+        android:text="JE M'INSCRIS"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        />
+</RelativeLayout>
