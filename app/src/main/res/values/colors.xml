@@ -13,4 +13,7 @@
     <color name="darkRed">#d25446</color>
     <color name="blue">#32528d</color>
     <color name="darkBlue">#355797</color>
+
+    <color name="google_red">#BF2C26</color>
+    <color name="facebook_blue">#263E7A</color>
 </resources>

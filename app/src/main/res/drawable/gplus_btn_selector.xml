@@ -2,5 +2,5 @@
     <item android:state_focused="true" android:state_pressed="false" android:drawable="@color/darkRed" />
     <item android:state_focused="true" android:state_pressed="true" android:drawable="@color/darkRed" />
     <item android:state_focused="false" android:state_pressed="true" android:drawable="@color/darkRed" />
-    <item android:drawable="@color/red" />
+    <item android:drawable="@color/google_red" />
 </selector>

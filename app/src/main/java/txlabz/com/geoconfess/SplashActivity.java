@@ -33,7 +33,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 /*TODO: Check here if user has already logged, if yes then navigate to
                 main screen instead of login*/
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
 
                 // close this activity

@@ -1,57 +1,71 @@
-package txlabz.com.geoconfess;
+package txlabz.com.geoconfess.Fragments;
 
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import txlabz.com.geoconfess.views.CustomProgressDialog;
+import txlabz.com.geoconfess.DialogUtility;
+import txlabz.com.geoconfess.GeneralUtility;
+import txlabz.com.geoconfess.MainActivity;
+import txlabz.com.geoconfess.R;
 import txlabz.com.geoconfess.web.AppApiController;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
- * A login screen that offers login via email/password.
+ * Created by irfanelahi on 27/04/2016.
  */
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginFragment extends Fragment implements View.OnClickListener{
 
     EditText username;
     EditText password;
     Button loginButton;
     View usernameDivider;
     View passwordDivider;
-    private ProgressDialog progressDialog;
+    TextView forgotPassword;
+    TextView signUp;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        username = (EditText) view.findViewById(R.id.username);
+        password = (EditText) view.findViewById(R.id.password);
+        loginButton = (Button) view.findViewById(R.id.loginButton);
 
-        username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
-        loginButton = (Button) findViewById(R.id.loginButton);
+        usernameDivider = view.findViewById(R.id.usernameDivider);
+        passwordDivider = view.findViewById(R.id.passwordDivider);
 
-        usernameDivider = findViewById(R.id.usernameDivider);
-        passwordDivider = findViewById(R.id.passwordDivider);
+        forgotPassword = (TextView) view.findViewById(R.id.ForgotPasswordlabel);
+        signUp = (TextView) view.findViewById(R.id.signUplabel);
 
         loginButton.setOnClickListener(this);
+        signUp.setOnClickListener(this);
+        forgotPassword.setOnClickListener(this);
 
-        progressDialog = CustomProgressDialog.ctor(this);
         setOnTouchListenerForPassword(password);
         setOnTouchListenerForUserName(username);
-        handleOnTouchUserName();
+
+
+        return view;
     }
 
     @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    public void onResume() {
+        super.onResume();
+        handleOnTouchUserName();
     }
 
     @Override
@@ -60,29 +74,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.loginButton:
                 Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().oathToken("password", username.getText().toString(), password.getText().toString(),
                         "android", "3kjh123iu42i314g123");
-                progressDialog.show();
+                ((MainActivity)getActivity()).showDialog();
                 oathAPICall.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        progressDialog.dismiss();
+                        ((MainActivity)getActivity()).hideDialog();
                         if(response.isSuccessful()) {
-                            DialogUtility.showDialog(LoginActivity.this, "Message", "Success.");
+                            DialogUtility.showDialog(getActivity(), "Message", "Success.");
                         } else {
-                            DialogUtility.showDialog(LoginActivity.this, "Message", "Error.");
+                            DialogUtility.showDialog(getActivity(), "Message", "Error.");
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        progressDialog.dismiss();
-                        DialogUtility.showDialog(LoginActivity.this, "Message", "Error.");
+                        ((MainActivity)getActivity()).hideDialog();
+                        DialogUtility.showDialog(getActivity(), "Message", "Error.");
                     }
                 });
-                GeneralUtility.hideKeyBoard(this);
+                GeneralUtility.hideKeyBoard(getActivity());
                 break;
-        }
-    }
+            case R.id.ForgotPasswordlabel:
 
+                break;
+            case R.id.signUplabel:
+                ((MainActivity)getActivity()).loadFragment(new SignUpStep1Fragment());
+                break;
+        }    }
 
     private void setOnTouchListenerForPassword(final EditText edit_Text) {
         edit_Text.setOnTouchListener(new View.OnTouchListener() {
@@ -136,6 +154,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         usernameDivider.setVisibility(View.VISIBLE);
     }
 
-
 }
-

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/username"
+        android:hint="@string/prompt_email"
+        style="@style/AppTheme.Widget.EditText.Helvetica"
+        android:drawableLeft="@drawable/icon_identification_off"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <View
+        android:id="@+id/usernameDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/default_padding_xlarge"
+        android:layout_marginRight="@dimen/default_padding_xlarge"
+        android:background="@color/colorGreyTextHint"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:hint="@string/prompt_password"
+        style="@style/AppTheme.Widget.EditText.Helvetica"
+        android:drawableLeft="@drawable/icon_password_off"
+        android:drawablePadding="20dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="3dp"/>
+
+    <View
+        android:id="@+id/passwordDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/default_padding_xlarge"
+        android:layout_marginRight="@dimen/default_padding_xlarge"
+        android:background="@color/colorGreyTextHint"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/AppTheme.Widget.Button.adventpro"
+        android:text="SE CONNECTER"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/ForgotPasswordlabel"
+        style="@style/AppTheme.Widget.TextView.Helvetica"
+        android:text="@string/forgot_password"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/googlePlus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_marginLeft="@dimen/default_padding_xlarge"
+        android:layout_marginRight="@dimen/default_padding_xlarge"
+        android:background="@drawable/gplus_btn_selector"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/google"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/googlelabel"
+            style="@style/AppTheme.Widget.TextView.Helvetica"
+            android:text="@string/gmail_string"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_marginLeft="@dimen/default_padding_xlarge"
+        android:layout_marginRight="@dimen/default_padding_xlarge"
+        android:background="@drawable/fb_btn_selector"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/facebook"
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/facebooklabel"
+            style="@style/AppTheme.Widget.TextView.Helvetica"
+            android:text="@string/facebook_string"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="10dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signUplabel"
+        style="@style/AppTheme.Widget.TextView.Helvetica"
+        android:text="@string/signup"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"/>
+</LinearLayout>

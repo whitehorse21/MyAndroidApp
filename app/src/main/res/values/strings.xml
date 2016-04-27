@@ -5,5 +5,9 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Identifiant</string>
     <string name="prompt_password">Mot de passe</string>
+    <string name="gmail_string">S\'identifier avec Google</string>
+    <string name="facebook_string">S\'identifier avec Facebook</string>
+    <string name="forgot_password">Mot de passe oublie ?</string>
+    <string name="signup">S\'inscrire sur Geoconfess</string>
 
 </resources>
