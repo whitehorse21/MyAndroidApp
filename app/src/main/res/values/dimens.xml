@@ -47,5 +47,5 @@
 
     <dimen name="actionbar_size">60dp</dimen>
 
-    <dimen name="small_icon">20dp</dimen>
+    <dimen name="small_icon">30dp</dimen>
 </resources>

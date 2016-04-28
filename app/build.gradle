@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "txlabz.com.geoconfess"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
@@ -26,7 +26,7 @@ dependencies {
     compile 'com.android.support:design:23.0.1'
     // font library
     compile 'uk.co.chrisjenx:calligraphy:2.1.0'
-
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
     //API
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0'

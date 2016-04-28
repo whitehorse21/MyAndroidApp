@@ -4,6 +4,11 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Identifiant</string>
+    <string name="surname">Nom</string>
+    <string name="name">Prénom</string>
+    <string name="email">Adresse mail</string>
+    <string name="phone">Téléphone</string>
+
     <string name="prompt_password">Mot de passe</string>
     <string name="gmail_string">S\'identifier avec Google</string>
     <string name="facebook_string">S\'identifier avec Facebook</string>

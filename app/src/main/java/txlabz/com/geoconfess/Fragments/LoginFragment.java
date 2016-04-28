@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -95,10 +93,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                 GeneralUtility.hideKeyBoard(getActivity());
                 break;
             case R.id.ForgotPasswordlabel:
+                ((MainActivity)getActivity()).loadFragment(new ForgotPassword(),true);
 
                 break;
             case R.id.signUplabel:
-                ((MainActivity)getActivity()).loadFragment(new SignUpStep1Fragment());
+                ((MainActivity)getActivity()).loadFragment(new SignUpStep1Fragment(),true);
                 break;
         }    }
 
@@ -127,6 +126,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     }
 
     private void handleOnTouchUserName() {
+
+        username.setBackgroundResource(R.color.colorAccent);
+        password.setBackgroundResource(R.color.white);
+
         username.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_identification_on, 0, 0, 0);
         password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_password_off, 0, 0, 0);
 
@@ -141,6 +144,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     }
 
     private void handleOnTouchPassword() {
+        password.setBackgroundResource(R.color.colorAccent);
+        username.setBackgroundResource(R.color.white);
+
         password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_password_on, 0, 0, 0);
         username.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_identification_off, 0, 0, 0);
 

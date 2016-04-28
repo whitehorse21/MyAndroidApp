@@ -14,7 +14,6 @@
     <style name="AppTheme.Widget.EditText" parent="android:Widget.EditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/default_edit_text_height</item>
-        <item name="android:background">@drawable/edittext_bg_color</item>
         <item name="android:textColorHint">@color/colorGreyTextHint</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:gravity">left|center</item>
@@ -81,8 +80,19 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="AppTheme.Widget.TextView2" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGreyText</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+       </style>
 
     <style name="AppTheme.Widget.TextView.Helvetica" parent="AppTheme.Widget.TextView">
         <item name="fontPath">fonts/HelveticaNeueLTCom-Roman.ttf</item>
     </style>
+    <style name="AppTheme.Widget.TextView.Helvetica2" parent="AppTheme.Widget.TextView2">
+        <item name="fontPath">fonts/HelveticaNeueLTCom-Roman.ttf</item>
+    </style>
+
+
 </resources>

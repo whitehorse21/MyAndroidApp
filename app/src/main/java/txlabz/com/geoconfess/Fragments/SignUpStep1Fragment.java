@@ -43,6 +43,24 @@ public class SignUpStep1Fragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_user:
+                Bundle bundle=new Bundle();
+                bundle.putString("isshow", "0");
+                SignUpStep2Fragment f=new SignUpStep2Fragment();
+                f.setArguments(bundle);
+                ((MainActivity) getActivity()).loadFragment(f, true);
+
+                break;
+            case R.id.btn_priest:
+                Bundle bundle2=new Bundle();
+                bundle2.putString("isshow", "1");
+                SignUpStep2Fragment f2=new SignUpStep2Fragment();
+                f2.setArguments(bundle2);
+                ((MainActivity) getActivity()).loadFragment(f2, true);
+
+                break;
+
+
         }
     }
 
