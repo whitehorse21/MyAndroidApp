@@ -18,6 +18,7 @@ import txlabz.com.geoconfess.DialogUtility;
 import txlabz.com.geoconfess.GeneralUtility;
 import txlabz.com.geoconfess.MainActivity;
 import txlabz.com.geoconfess.R;
+import txlabz.com.geoconfess.models.response.AuthResponse;
 import txlabz.com.geoconfess.web.AppApiController;
 
 /**
@@ -70,12 +71,13 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginButton:
-                Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().oathToken("password", username.getText().toString(), password.getText().toString(),
+                Call<AuthResponse> oathAPICall = AppApiController.getApiInstance().oathToken("password", username.getText().toString(), password.getText().toString(),
                         "android", "3kjh123iu42i314g123");
                 ((MainActivity)getActivity()).showDialog();
-                oathAPICall.enqueue(new Callback<ResponseBody>() {
+                oathAPICall.enqueue(new Callback<AuthResponse>() {
                     @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
+                        AuthResponse responseModel = response.body();
                         ((MainActivity)getActivity()).hideDialog();
                         if(response.isSuccessful()) {
                             DialogUtility.showDialog(getActivity(), "Message", "Success.");
@@ -85,7 +87,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                     }
 
                     @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    public void onFailure(Call<AuthResponse> call, Throwable t) {
                         ((MainActivity)getActivity()).hideDialog();
                         DialogUtility.showDialog(getActivity(), "Message", "Error.");
                     }
