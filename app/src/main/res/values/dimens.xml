@@ -46,6 +46,7 @@
     <dimen name="history_list_item_height">70dp</dimen>
 
     <dimen name="actionbar_size">60dp</dimen>
+    <dimen name="fragmentheight">470dp</dimen>
 
     <dimen name="small_icon">30dp</dimen>
 </resources>

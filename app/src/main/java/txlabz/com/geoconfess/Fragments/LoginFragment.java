@@ -1,5 +1,6 @@
 package txlabz.com.geoconfess.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import txlabz.com.geoconfess.DialogUtility;
 import txlabz.com.geoconfess.GeneralUtility;
+import txlabz.com.geoconfess.HomeActivity;
 import txlabz.com.geoconfess.MainActivity;
 import txlabz.com.geoconfess.R;
 import txlabz.com.geoconfess.models.response.AuthResponse;
@@ -80,7 +82,13 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                         AuthResponse responseModel = response.body();
                         ((MainActivity)getActivity()).hideDialog();
                         if(response.isSuccessful()) {
-                            DialogUtility.showDialog(getActivity(), "Message", "Success.");
+                            //  DialogUtility.showDialog(getActivity(), "Message", "Success.");
+
+                            Intent intent=new Intent(getActivity(), HomeActivity.class);
+                            startActivity(intent);
+                            getActivity().finish();
+
+
                         } else {
                             DialogUtility.showDialog(getActivity(), "Message", "Error.");
                         }

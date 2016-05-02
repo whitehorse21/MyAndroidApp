@@ -8,6 +8,8 @@
     <string name="name">Prénom</string>
     <string name="email">Adresse mail</string>
     <string name="phone">Téléphone</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
 
     <string name="prompt_password">Mot de passe</string>
     <string name="gmail_string">S\'identifier avec Google</string>
