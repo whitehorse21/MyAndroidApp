@@ -3,6 +3,7 @@ package txlabz.com.geoconfess.Fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -90,6 +91,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                         ((MainActivity)getActivity()).hideDialog();
                         if(response.isSuccessful()) {
                             //  DialogUtility.showDialog(getActivity(), "Message", "Success.");
+                        //    Log.d("respncve",responseModel);
+
 
                             Utils.saveDataString("token",responseModel.getAccessToken(),getActivity());
 

@@ -30,7 +30,7 @@
         />
 
     <Button
-        android:id="@+id/btn_priest"
+        android:id="@+id/btn_spot"
         style="@style/AppTheme.Widget.Button.adventpro"
         android:layout_marginTop="20dp"
         android:background="@color/shadedBlue"
@@ -47,10 +47,10 @@
         android:text="ou"
         android:layout_marginTop="15dp"
         android:textSize="@dimen/font_size_medium_3"
-        android:layout_below="@+id/btn_priest"
+        android:layout_below="@+id/btn_spot"
         />
     <Button
-        android:id="@+id/btn_user"
+        android:id="@+id/btn_livetracking"
         style="@style/AppTheme.Widget.Button.adventpro"
         android:layout_marginTop="15dp"
         android:text="JE SUIS MOBILE"

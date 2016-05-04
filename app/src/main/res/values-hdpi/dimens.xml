@@ -8,7 +8,7 @@
     <dimen name="navigation_drawer_width">240dp</dimen>
     <dimen name="tabsHeight">48dp</dimen>
     <dimen name="headerHeight">320dp</dimen>
-    <dimen name="fragmentheight">470dp</dimen>
+    <dimen name="fragmentheight">500dp</dimen>
     <dimen name="mainfooterheight">140dp</dimen>
     <dimen name="mainfooterwidth">350dp</dimen>
 

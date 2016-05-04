@@ -12,7 +12,7 @@
     <dimen name="toolbar_elevation">4dp</dimen>
     <dimen name="rounded_corner_radius">30dp</dimen>
 
-    <dimen name="fragmentheight">550dp</dimen>
+    <dimen name="fragmentheight">580dp</dimen>
     <dimen name="footerheight">280dp</dimen>
     <dimen name="mainfooterheight">150dp</dimen>
     <dimen name="mainfooterwidth">350dp</dimen>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:layout_marginTop="60dp"
+    >
+
+    <TextView
+        android:id="@+id/headertext"
+        android:text="RÉCURENCE"
+        style="@style/AppTheme.Widget.TextView"
+        android:textSize="@dimen/font_size_xxlarge"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+
+        />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:id="@+id/line2"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:layout_below="@+id/headertext"
+
+
+      >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/checkbox"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lundi"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                >
+
+            </TextView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/checkbox"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mercedi"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/checkbox"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendredi"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/checkbox"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dimanche"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingLeft="20dp"
+          >
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+
+
+              <ImageView
+                  android:layout_width="15dp"
+                  android:layout_height="15dp"
+                  android:layout_gravity="center_vertical"
+                  android:src="@drawable/checkbox"
+                  >
+              </ImageView>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Mardi"
+                  android:textSize="18dp"
+                  android:layout_marginLeft="10dp"
+                  >
+
+              </TextView>
+
+
+
+
+
+          </LinearLayout>
+
+
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="10dp"
+              >
+              <ImageView
+                  android:layout_width="15dp"
+                  android:layout_height="15dp"
+                  android:layout_gravity="center_vertical"
+                  android:src="@drawable/checkbox"
+                  >
+              </ImageView>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Jeudi"
+                  android:textSize="18dp"
+                  android:layout_marginLeft="10dp"
+                  >
+
+              </TextView>
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="10dp"
+              >
+              <ImageView
+                  android:layout_width="15dp"
+                  android:layout_height="15dp"
+                  android:layout_gravity="center_vertical"
+                  android:src="@drawable/checkbox"
+                  >
+              </ImageView>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Samedi"
+                  android:textSize="18dp"
+                  android:layout_marginLeft="10dp"
+                  >
+
+              </TextView>
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="10dp"
+              >
+              <ImageView
+                  android:layout_width="15dp"
+                  android:layout_height="15dp"
+                  android:layout_gravity="center_vertical"
+                  >
+              </ImageView>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="18dp"
+                  android:layout_marginLeft="10dp"
+                  >
+
+              </TextView>
+          </LinearLayout>
+
+
+
+      </LinearLayout>
+
+  </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/line2"
+        android:id="@+id/linear"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="DE"
+
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+            android:text=":"
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="30"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/linear"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="á"
+
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:id="@+id/textView2"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+
+            android:text=":"
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="30"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="#a7a7a7"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bottombtn">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add"
+
+            >
+        </ImageView>
+
+        <TextView
+            android:text="ENREGISTRER"
+            style="@style/AppTheme.Widget.TextView"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:text="LE"
+            style="@style/AppTheme.Widget.TextView"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_width="wrap_content"
+
+            />
+        <TextView
+            android:text="LIEU"
+            style="@style/AppTheme.Widget.TextView"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
