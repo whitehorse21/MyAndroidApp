@@ -129,16 +129,6 @@ public class SignUpStep2Fragment extends Fragment implements View.OnClickListene
                 return false;
             }
         });
-        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-
-
-                handleOnTouchEmail();
-            }
-        });
-
-
     }
 
     private void setOnTouchListenerForName(final EditText edit_Text) {
@@ -151,18 +141,6 @@ public class SignUpStep2Fragment extends Fragment implements View.OnClickListene
                 return false;
             }
         });
-
-        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-
-
-                handleOnTouchName();
-            }
-        });
-
-
-
     }
     private void setOnTouchListenerForSurname(final EditText edit_Text) {
         edit_Text.setOnTouchListener(new View.OnTouchListener() {
@@ -173,15 +151,6 @@ public class SignUpStep2Fragment extends Fragment implements View.OnClickListene
                 return false;
             }
         });
-        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                handleOnTouchSurname();
-            }
-        });
-
-
-
     }
     private void setOnTouchListenerForPhone(final EditText edit_Text) {
         edit_Text.setOnTouchListener(new View.OnTouchListener() {
@@ -193,14 +162,6 @@ public class SignUpStep2Fragment extends Fragment implements View.OnClickListene
                 return false;
             }
         });
-        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                handleOnTouchPhone();
-            }
-        });
-
-
     }
 
     private void handleOnTouchName() {

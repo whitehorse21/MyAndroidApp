@@ -10,6 +10,7 @@
         style="@style/AppTheme.Widget.EditText.Helvetica"
         android:drawableLeft="@drawable/icon_identification_off"
         android:drawablePadding="20dp"
+        android:text="priest@example.com"
         android:layout_marginTop="40dp"/>
 
     <View

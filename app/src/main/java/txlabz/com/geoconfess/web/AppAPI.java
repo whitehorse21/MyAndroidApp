@@ -38,4 +38,30 @@ public interface AppAPI {
             @Query("user[email]") String email
     );
 
+
+    /*
+    *  Defining Retrofit interface for calling spot creation Api with the requested parameters
+    * */
+    @POST("api/v1/spots")
+    Call<ResponseBody> createSpot(
+            @Query("spot[name]") String name,
+            @Query("spot[activity_type]") String activity_type,
+            @Query("spot[latitude]") String latitude,
+            @Query("spot[longitude]") String longitude,
+            @Query("access_token") String access_token
+
+    );
+
+
+    /*
+   *  Defining Retrofit interface for calling spot updation Api with the requested parameters
+   * */
+    @POST("api/v1/spots/:id")
+    Call<ResponseBody> updateSpot(
+            @Query("spot[latitude]") String latitude,
+            @Query("spot[longitude]") String longitude,
+            @Query("access_token") String access_token
+
+    );
+
 }

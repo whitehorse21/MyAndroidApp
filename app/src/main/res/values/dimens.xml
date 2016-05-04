@@ -17,7 +17,7 @@
 
     <dimen name="font_size_large">23sp</dimen>
     <dimen name="font_size_xlarge">26sp</dimen>
-    <dimen name="font_size_xxlarge">25sp</dimen>
+    <dimen name="font_size_xxlarge">30sp</dimen>
 
     <!-- TEXT LINE SPACING EXTRA -->
     <dimen name="default_line_spacing_extra">3dp</dimen>
@@ -47,9 +47,6 @@
 
     <dimen name="actionbar_size">60dp</dimen>
     <dimen name="fragmentheight">470dp</dimen>
-    <dimen name="footerheight">200dp</dimen>
-    <dimen name="mainfooterheight">140dp</dimen>
-    <dimen name="mainfooterwidth">350dp</dimen>
 
     <dimen name="small_icon">30dp</dimen>
 </resources>

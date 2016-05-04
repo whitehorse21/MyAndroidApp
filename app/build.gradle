@@ -30,4 +30,6 @@ dependencies {
     //API
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+
+    compile 'com.google.android.gms:play-services:6.5.87'
 }
