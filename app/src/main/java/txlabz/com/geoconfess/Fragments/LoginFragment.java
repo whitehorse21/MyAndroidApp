@@ -3,12 +3,14 @@ package txlabz.com.geoconfess.Fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import okhttp3.ResponseBody;
@@ -20,8 +22,8 @@ import txlabz.com.geoconfess.GeneralUtility;
 import txlabz.com.geoconfess.HomeActivity;
 import txlabz.com.geoconfess.MainActivity;
 import txlabz.com.geoconfess.R;
+import txlabz.com.geoconfess.Utils;
 import txlabz.com.geoconfess.models.response.AuthResponse;
-import txlabz.com.geoconfess.sharedpreference.MySharedPreference;
 import txlabz.com.geoconfess.web.AppApiController;
 
 /**
@@ -36,7 +38,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     View passwordDivider;
     TextView forgotPassword;
     TextView signUp;
-    MySharedPreference mySharedPreference;
+    LinearLayout googlePlus;
+    LinearLayout facebook;
 
 
     @Override
@@ -45,6 +48,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         username = (EditText) view.findViewById(R.id.username);
+        googlePlus=(LinearLayout)view.findViewById(R.id.googlePlus);
+        facebook=(LinearLayout)view.findViewById(R.id.facebook);
+
         password = (EditText) view.findViewById(R.id.password);
         loginButton = (Button) view.findViewById(R.id.loginButton);
 
@@ -84,9 +90,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                         AuthResponse responseModel = response.body();
                         ((MainActivity)getActivity()).hideDialog();
                         if(response.isSuccessful()) {
-                       //     if(true) {
                             //  DialogUtility.showDialog(getActivity(), "Message", "Success.");
-                            mySharedPreference.getInstance(getActivity()).putString("accessToken",responseModel.getAccessToken());
+                        //    Log.d("respncve",responseModel);
+
+
+                            Utils.saveDataString("token",responseModel.getAccessToken(),getActivity());
+
                             Intent intent=new Intent(getActivity(), HomeActivity.class);
                             startActivity(intent);
                             getActivity().finish();
@@ -106,36 +115,69 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                 GeneralUtility.hideKeyBoard(getActivity());
                 break;
             case R.id.ForgotPasswordlabel:
-                ((MainActivity)getActivity()).loadFragment(new ForgotPassword(),true);
+                ((MainActivity)getActivity()).loadFragment(new ForgotPassword(), true);
 
                 break;
             case R.id.signUplabel:
                 ((MainActivity)getActivity()).loadFragment(new SignUpStep1Fragment(),true);
                 break;
+            case R.id.facebook:
+                break;
+            case R.id.googlePlus:
+                break;
+
+
+
         }    }
 
     private void setOnTouchListenerForPassword(final EditText edit_Text) {
         edit_Text.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_HOVER_ENTER) {
                     handleOnTouchPassword();
                 }
                 return false;
             }
         });
+        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                handleOnTouchPassword();
+
+            }
+        });
+
+
+
     }
 
     private void setOnTouchListenerForUserName(final EditText edit_Text) {
         edit_Text.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_UP) {
+                if(event.getAction() == MotionEvent.ACTION_UP||event.getAction() == MotionEvent.ACTION_HOVER_ENTER) {
                     handleOnTouchUserName();
                 }
                 return false;
             }
         });
+
+        edit_Text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+                if(b)
+                {
+                    handleOnTouchUserName();
+
+
+
+                }
+
+            }
+        });
+
     }
 
     private void handleOnTouchUserName() {

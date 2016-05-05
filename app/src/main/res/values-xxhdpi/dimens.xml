@@ -14,6 +14,10 @@
 
     <dimen name="header_size">290dp</dimen>
     <dimen name="item_offset">1dp</dimen>
+    <dimen name="fragmentheight">580dp</dimen>
+    <dimen name="footerheight">280dp</dimen>
+    <dimen name="mainfooterheight">200dp</dimen>
+    <dimen name="mainfooterwidth">350dp</dimen>
 
     <dimen name="beam_size">350dp</dimen>
 

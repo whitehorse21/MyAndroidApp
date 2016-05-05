@@ -17,11 +17,8 @@
     <string name="forgot_password">Mot de passe oublie ?</string>
     <string name="signup">S\'inscrire sur Geoconfess</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
     <!--Service Tracking Toasts-->
     <string name="service_start_toast_message">Merci d’avoir activé la géolocalisation! Vous recevrez une notification dès qu’un pénitent vous enverra une demande de confession.</string>
+
 
 </resources>

@@ -2,28 +2,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
 
     <include
         android:id="@+id/header"
-        layout="@layout/layout_toolbar_red" />
+        layout="@layout/layout_toolbar_red"
+        />
 
     <ImageView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/mainfooterwidth"
+        android:layout_height="@dimen/mainfooterheight"
+        android:src="@drawable/footerimage"
         android:scaleType="fitXY"
-        android:src="@drawable/footerimage" />
-
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
     <FrameLayout
         android:id="@+id/mainframe"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/header" />
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"/>
 
 
     <!-- Login progress -->

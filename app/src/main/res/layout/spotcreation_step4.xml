@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#f1f1f1"
+    android:layout_marginTop="60dp"
+    >
+
+
+
+    <Button
+        android:id="@+id/btn_spot"
+        style="@style/AppTheme.Widget.Button.adventpro"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:text="CRÉER UNE RÉCURRENCE"
+        android:layout_below="@+id/lbl_signup_header"
+        android:layout_alignParentLeft="true"
+        android:textSize="18sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/lbl_or"
+        style="@style/AppTheme.Widget.TextView"
+        android:text="ou"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/font_size_medium_3"
+        android:layout_below="@+id/btn_spot"
+        />
+    <Button
+        android:id="@+id/btn_livetracking"
+        style="@style/AppTheme.Widget.Button.adventpro"
+        android:layout_marginTop="15dp"
+        android:text="Date"
+        android:textSize="18sp"
+        android:background="#f6afb2"
+        android:padding="10dp"
+        android:gravity="start|center_vertical"
+        android:layout_below="@+id/lbl_or"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btn_livetracking"
+        android:id="@+id/linear"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="DE"
+
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+            android:text=":"
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="30"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/linear"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="á"
+
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:id="@+id/textView2"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+
+            android:text=":"
+
+            android:gravity="center"
+            android:textColor="#d3d3d3"
+            />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="30"
+            android:gravity="center"
+            android:background="#d3d3d3"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownarrow"
+            >
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="#a7a7a7"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bottombtn">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add"
+
+            >
+        </ImageView>
+
+        <TextView
+            android:text="ENREGISTRER"
+            style="@style/AppTheme.Widget.TextView"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:text="LE"
+            style="@style/AppTheme.Widget.TextView"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_width="wrap_content"
+
+            />
+        <TextView
+            android:text="LIEU"
+            style="@style/AppTheme.Widget.TextView"
+            android:textSize="@dimen/font_size_xxlarge"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_marginLeft="10dp"
+
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

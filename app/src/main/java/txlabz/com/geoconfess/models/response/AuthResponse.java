@@ -2,9 +2,6 @@ package txlabz.com.geoconfess.models.response;
 
 import com.google.gson.annotations.SerializedName;
 
-
-
-
 public class AuthResponse{
 
     @SerializedName("access_token")

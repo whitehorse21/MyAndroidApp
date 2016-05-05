@@ -74,10 +74,9 @@ disponible se trouve dans un rayon de 2 km"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            style="@style/AppTheme.Widget.EditText.Helvetica"
+            style="@style/AppTheme.Widget.Button.adventpro"
             android:id="@+id/picturebtn"
             android:layout_gravity="center"
-            android:background="#ed5f66"
             android:layout_marginTop="20dp"
             >
             <ImageView

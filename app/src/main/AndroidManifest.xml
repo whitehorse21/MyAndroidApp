@@ -38,7 +38,8 @@
             android:theme="@style/Theme.NoActionBar" />
         <activity android:name=".HomeActivity"></activity>
 
-        <service android:name=".tracking.service.TrackLocation"/>
+        <service android:name=".service.TrackLocation"
+            android:stopWithTask="true"/>
     </application>
 
 </manifest>
