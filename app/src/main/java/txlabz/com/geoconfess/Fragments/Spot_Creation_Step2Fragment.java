@@ -56,7 +56,7 @@ public class Spot_Creation_Step2Fragment extends Fragment implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bottombtn:
-                Spot_Creation_Step4Fragment f=new Spot_Creation_Step4Fragment();
+                Spot_Creation_Step3Fragment f=new Spot_Creation_Step3Fragment();
                 ((HomeActivity) getActivity()).loadFragment(f,true,false);
                 break;
             case R.id.btn_priest:

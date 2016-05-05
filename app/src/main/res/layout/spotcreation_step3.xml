@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_marginTop="60dp"
+    android:orientation="vertical"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,15 +19,17 @@
 
             >
         </View>
-        <EditText
+        <AutoCompleteTextView
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:padding="4dp"
+            android:id="@+id/autocomplete"
+            android:textSize="13sp"
             android:hint="Nom du lieu"
             android:background="@color/white"
             android:layout_weight="1.5"
             >
-        </EditText>
+        </AutoCompleteTextView>
         <View
             android:layout_weight=".1"
             android:layout_width="0dp"
@@ -53,5 +56,9 @@
 
     </LinearLayout>
 
-
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
