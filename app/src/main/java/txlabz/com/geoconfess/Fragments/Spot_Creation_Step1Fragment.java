@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import txlabz.com.geoconfess.HomeActivity;
 import txlabz.com.geoconfess.R;
@@ -108,9 +109,18 @@ public class Spot_Creation_Step1Fragment extends Fragment implements View.OnClic
                 * */
                 visibilityStatus = Utils.getDatastring("ServiceStatus", null, getActivity());
                 if (!visibilityStatus.equals("Running")) {
-                    getActivity().startService(i);
-                    indisponsilble.setVisibility(View.GONE);
-                    indisponsilblegreen.setVisibility(View.VISIBLE);
+                    if(Utils.isgpson(getActivity())) {
+                        if (Utils.haveInternet(getActivity())) {
+                            getActivity().startService(i);
+                            indisponsilble.setVisibility(View.GONE);
+                            indisponsilblegreen.setVisibility(View.VISIBLE);
+                        } else {
+                            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.no_internet_message), Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.no_gps_message), Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
                     getActivity().stopService(i);
                     indisponsilble.setVisibility(View.VISIBLE);

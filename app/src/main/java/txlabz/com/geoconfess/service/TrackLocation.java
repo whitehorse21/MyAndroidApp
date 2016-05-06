@@ -85,29 +85,35 @@ public class TrackLocation extends Service implements GoogleApiClient.Connection
     public void onDestroy() {
         super.onDestroy();
 
-        Utils.saveDataString("ServiceStatus", "NotRunning", this);
-        LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
+        try {
+            Utils.saveDataString("ServiceStatus", "NotRunning", this);
+            LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
 
-        Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().deleteSpot(spotId, accessToken);
+            Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().deleteSpot(spotId, accessToken);
 
-        oathAPICall.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.isSuccessful()) {
-                    Toast.makeText(context, "Tracking Stopped \n" +
-                            "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
-                            "Last Longitude = " + mLastLocation.getLongitude() + "\n"
-                            , Toast.LENGTH_SHORT).show();
-                } else {
-                    //Toast.makeText(context, "Message Error.sopt update", Toast.LENGTH_SHORT).show();
+            oathAPICall.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful()) {
+                        Toast.makeText(context, "Tracking Stopped \n" +
+                                "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
+                                "Last Longitude = " + mLastLocation.getLongitude() + "\n"
+                                , Toast.LENGTH_SHORT).show();
+                    } else {
+                        //Toast.makeText(context, "Message Error.sopt update", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                //Toast.makeText(context, "Message" + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    //Toast.makeText(context, "Message" + t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -143,87 +149,37 @@ public class TrackLocation extends Service implements GoogleApiClient.Connection
     public void onLocationChanged(final Location location) {
         mCurrentLocation = location;
 
-        if (!spotCreation) {
-           /*
-            * Create Spot on the server if the user is first time setting his availability to visible
-            * */
+        try {
+            mCurrentLocation = location;
 
-            Call<SpotResponse> oathAPICall = AppApiController.getApiInstance().createSpot(name, "dynamic", "" + mCurrentLocation.getLatitude(), "" + mCurrentLocation.getLongitude(), accessToken);
-            oathAPICall.enqueue(new Callback<SpotResponse>() {
-                @Override
-                public void onResponse(Call<SpotResponse> call, Response<SpotResponse> response) {
-                    if (response.isSuccessful()) {
-                        SpotResponse responseBody = response.body();
-                        /*
-                        * Keep the id of the newly created dynamic spot
-                        * */
-                        spotId = responseBody.getId();
-                        Toast.makeText(context, "Spot Created " + "\n" +
-                                "Latitiute = " + location.getLatitude() + "\n" +
-                                "Longitude = " + location.getLongitude() + "\n" +
-                                "Updated at Server = Updated", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        // Toast.makeText(context, "Message Error spot creation.", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<SpotResponse> call, Throwable t) {
-
-                }
-            });
-
-            spotCreation = true;
-            mLastLocation = location;
-        } else {
+            if (!spotCreation) {
+                createSpot(location);
+                spotCreation = true;
+                mLastLocation = location;
+            } else {
             /*
             * Comparing last location with current location and updating spot if the user has travelled 100 meters
             * */
+                final float meterDistance = location.distanceTo(mLastLocation);
+                if (meterDistance > distanceToUpdate)
+                //  if(true)
+                {
+                    updateSpot(location, meterDistance);
 
-            final float meterDistance = location.distanceTo(mLastLocation);
-            if (meterDistance > distanceToUpdate)
-            //  if(true)
-            {
-                /*
-                 *  Updating Spot location Each time onLocation is called depending upon the parameters pased to the fused api
-                * */
-                Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().updateSpot(spotId, "" + mCurrentLocation.getLatitude(), "" + mCurrentLocation.getLongitude(), accessToken);
-
-                oathAPICall.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.isSuccessful()) {
-                            Toast.makeText(context, "10 Min Update " + "\n" +
-                                    "Latitiute = " + location.getLatitude() + "\n" +
-                                    "Longitude = " + location.getLongitude() + "\n" +
-                                    "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
-                                    "Last Longitude = " + mLastLocation.getLongitude() + "\n" +
-                                    "Distance = " + meterDistance + "Meters" + "\n" +
-                                    "Updated at Server = Updated", Toast.LENGTH_SHORT).show();
-                        } else {
-                            //   Toast.makeText(context, "Message Error.sopt update", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        //   Toast.makeText(context, "Message" + t.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-            }else
-            {
-                Toast.makeText(context, "10 Min Update " + "\n" +
-                        "Latitiute = " + location.getLatitude() + "\n" +
-                        "Longitude = " + location.getLongitude() + "\n" +
-                        "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
-                        "Last Longitude = " + mLastLocation.getLongitude() + "\n" +
-                        "Distance = " + meterDistance + "Meters" + "\n" +
-                        "Updated at Server = Not Updating", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context, "10 Min Update " + "\n" +
+                            "Latitiute = " + location.getLatitude() + "\n" +
+                            "Longitude = " + location.getLongitude() + "\n" +
+                            "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
+                            "Last Longitude = " + mLastLocation.getLongitude() + "\n" +
+                            "Distance = " + meterDistance + "Meters" + "\n" +
+                            "Updated at Server = Not Updating", Toast.LENGTH_SHORT).show();
+                }
+                mLastLocation = location;
             }
-            mLastLocation = location;
+        }catch (Exception e)
+        {
+            e.printStackTrace();
         }
     }
 
@@ -242,5 +198,72 @@ public class TrackLocation extends Service implements GoogleApiClient.Connection
 
     protected void startLocationUpdates() {
         LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, mLocationRequest, this);
+    }
+
+
+    void createSpot(final Location location)
+    {
+         /*
+            * Create Spot on the server if the user is first time setting his availability to visible
+            * */
+
+        Call<SpotResponse> oathAPICall = AppApiController.getApiInstance().createSpot(name, "dynamic", "" + mCurrentLocation.getLatitude(), "" + mCurrentLocation.getLongitude(), accessToken);
+        oathAPICall.enqueue(new Callback<SpotResponse>() {
+            @Override
+            public void onResponse(Call<SpotResponse> call, Response<SpotResponse> response) {
+                if (response.isSuccessful()) {
+                    SpotResponse responseBody = response.body();
+                        /*
+                        * Keep the id of the newly created dynamic spot
+                        * */
+                    spotId = responseBody.getId();
+                    Toast.makeText(context, "Spot Created " + "\n" +
+                            "Latitiute = " + location.getLatitude() + "\n" +
+                            "Longitude = " + location.getLongitude() + "\n" +
+                            "Updated at Server = Updated", Toast.LENGTH_SHORT).show();
+                    //Updating Spot
+                    updateSpot(location,0);
+
+                } else {
+                    // Toast.makeText(context, "Message Error spot creation.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SpotResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    void updateSpot(final Location location,final float meterDistance)
+    {
+          /*
+           *  Updating Spot location Each time onLocation is called depending upon the parameters pased to the fused api
+           * */
+        Call<ResponseBody> oathAPICall = AppApiController.getApiInstance().updateSpot(spotId, "" + mCurrentLocation.getLatitude(), "" + mCurrentLocation.getLongitude(), accessToken);
+
+        oathAPICall.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()) {
+                    Toast.makeText(context, "10 Min Update " + "\n" +
+                            "Latitiute = " + location.getLatitude() + "\n" +
+                            "Longitude = " + location.getLongitude() + "\n" +
+                            "Last Latitiute = " + mLastLocation.getLatitude() + "\n" +
+                            "Last Longitude = " + mLastLocation.getLongitude() + "\n" +
+                            "Distance = " + meterDistance + "Meters" + "\n" +
+                            "Updated at Server = Updated", Toast.LENGTH_SHORT).show();
+                } else {
+                    //   Toast.makeText(context, "Message Error.sopt update", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                //   Toast.makeText(context, "Message" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }
