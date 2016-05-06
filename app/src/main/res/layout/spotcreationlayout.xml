@@ -6,7 +6,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-android:layout_marginTop="60dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -17,7 +17,6 @@ android:layout_marginTop="60dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-
         android:background="@drawable/linear_btn_selector"
         android:gravity="center"
         android:layout_alignParentBottom="true"
@@ -31,14 +30,14 @@ android:layout_marginTop="60dp"
             android:src="@drawable/add"
 
             >
-            </ImageView>
+        </ImageView>
 
         <TextView
             android:text="AJOUTER"
             style="@style/AppTheme.Widget.TextView"
             android:textSize="@dimen/font_size_xxlarge"
             android:textColor="@color/white"
-          android:gravity="start"
+            android:gravity="start"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:textStyle="bold"
@@ -49,7 +48,7 @@ android:layout_marginTop="60dp"
             android:text="UN"
             style="@style/AppTheme.Widget.TextView"
             android:layout_marginLeft="10dp"
-android:textStyle="normal"
+            android:textStyle="normal"
             android:textSize="@dimen/font_size_xxlarge"
             android:textColor="@color/white"
             android:gravity="start"

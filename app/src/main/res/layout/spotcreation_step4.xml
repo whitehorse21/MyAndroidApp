@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#f1f1f1"
+    android:background="#f1f1f1"
     android:layout_marginTop="60dp"
     >
 
@@ -27,6 +27,14 @@ android:background="#f1f1f1"
         android:text="ou"
         android:layout_marginTop="15dp"
         android:textSize="@dimen/font_size_medium_3"
+        android:layout_below="@+id/btn_spot"
+        />
+    <Button
+        android:id="@+id/btn_livetracking"
+        style="@style/AppTheme.Widget.Button.adventpro"
+        android:layout_marginTop="15dp"
+        android:text="Date"
+        android:textSize="18sp"
         android:layout_below="@+id/btn_tostep5"
         />
     <TextView
@@ -36,7 +44,7 @@ android:background="#f1f1f1"
         android:textSize="18sp"
         android:hint="Date"
         android:textColor="@android:color/white"
-      android:textColorHint="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:background="#f6afb2"
         android:padding="10dp"
         android:gravity="start|center_vertical"
@@ -102,7 +110,6 @@ android:background="#f1f1f1"
             android:layout_height="25dp"
             android:scaleType="fitXY"
             android:id="@+id/drop2"
-
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -144,7 +151,6 @@ android:background="#f1f1f1"
             android:layout_height="25dp"
             android:scaleType="fitXY"
             android:id="@+id/drop3"
-
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -152,9 +158,7 @@ android:background="#f1f1f1"
             android:layout_width="20dp"
             android:layout_height="25dp"
             android:textStyle="bold"
-
             android:text=":"
-
             android:gravity="center"
             android:textColor="#d3d3d3"
             />
@@ -173,7 +177,6 @@ android:background="#f1f1f1"
             android:layout_height="25dp"
             android:scaleType="fitXY"
             android:id="@+id/drop4"
-
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>

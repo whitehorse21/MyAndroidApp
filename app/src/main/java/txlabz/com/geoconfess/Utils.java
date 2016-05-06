@@ -183,7 +183,7 @@ public class Utils {
 		context=context1;
 	}
 
-	public Boolean isgpson(Context context)
+	public static Boolean isgpson(Context context)
 	{
 		locationManager = (LocationManager) context.getSystemService(
 				Context.LOCATION_SERVICE);

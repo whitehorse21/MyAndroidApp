@@ -88,8 +88,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.indisponsilble:
-                indisponsilble.setVisibility(View.GONE);
-                indisponsilblegreen.setVisibility(View.VISIBLE);
+             /*   indisponsilble.setVisibility(View.GONE);
+                indisponsilblegreen.setVisibility(View.VISIBLE);*/
+                indisponsilble.setVisibility(View.VISIBLE);
+                indisponsilblegreen.setVisibility(View.GONE);
                 Spot_Creation_Step1Fragment f=new Spot_Creation_Step1Fragment();
 
                 loadFragment(f, true,true);

@@ -7,16 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import txlabz.com.geoconfess.Adapters.Spot_List_Adapter;
 import txlabz.com.geoconfess.HomeActivity;
-import txlabz.com.geoconfess.MainActivity;
 import txlabz.com.geoconfess.R;
 import txlabz.com.geoconfess.Utils;
 
@@ -66,8 +63,5 @@ public class Spot_Creation_Step2Fragment extends Fragment implements View.OnClic
 
         }
     }
-
-
-
 
 }

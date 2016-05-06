@@ -3,23 +3,16 @@ package txlabz.com.geoconfess.Fragments;
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.text.Html;
-import android.text.Spanned;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +24,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.location.LocationListener;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -49,7 +42,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.MapFragment;
 
 import java.util.List;
 import java.util.Locale;
@@ -62,6 +54,7 @@ import txlabz.com.geoconfess.views.SupportMap;
 /**
  * Created by arslan on 5/5/2016.
  */
+
 public class Spot_Creation_Step3Fragment  extends Fragment implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener
 
 {
@@ -88,6 +81,7 @@ public class Spot_Creation_Step3Fragment  extends Fragment implements View.OnCli
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.spotcreation_step3, container, false);
+
         getGps();
 
         if( mGoogleApiClient==null) {
@@ -223,20 +217,6 @@ public class Spot_Creation_Step3Fragment  extends Fragment implements View.OnCli
 
     }
 
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_user:
-
-                break;
-            case R.id.btn_priest:
-
-                break;
-
-
-        }
-    }
 
     private AdapterView.OnItemClickListener mAutocompleteClickListener
             = new AdapterView.OnItemClickListener() {

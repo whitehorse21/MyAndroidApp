@@ -1,27 +1,23 @@
 package txlabz.com.geoconfess.Fragments;
 
-import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import txlabz.com.geoconfess.DialogUtility;
 import txlabz.com.geoconfess.R;
+
 
 /**
  * Created by arslan on 5/5/2016.
@@ -33,8 +29,8 @@ public class Spot_Creation_Step5Fragment  extends Fragment implements View.OnCli
     private ImageView check1,check2,check3,check4,check5,check6,check7;
     private  Boolean Bcheck1=false,Bcheck2=false,Bcheck3=false,Bcheck4=false,Bcheck5=false,Bcheck6=false,Bcheck7=false;
     ImageView drop1,drop2,drop3,drop4;
-
     private LinearLayout checkspace1,checkspace2,checkspace3,checkspace4,checkspace5,checkspace6,checkspace7;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

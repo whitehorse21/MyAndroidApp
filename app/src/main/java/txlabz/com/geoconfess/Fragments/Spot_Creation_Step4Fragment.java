@@ -5,8 +5,6 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,17 +19,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import javax.xml.transform.Templates;
-
 import txlabz.com.geoconfess.DialogUtility;
 import txlabz.com.geoconfess.HomeActivity;
-import txlabz.com.geoconfess.MainActivity;
 import txlabz.com.geoconfess.R;
 
 /**
  * Created by arslan on 5/5/2016.
  */
 public class Spot_Creation_Step4Fragment  extends Fragment implements View.OnClickListener {
+
 
     TextView fromhour,fromminute,tohour,tominute;
     static TextView date;
