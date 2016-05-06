@@ -79,6 +79,10 @@ public class Spot_Creation_Step1Fragment extends Fragment implements View.OnClic
         }
 
 
+       btn_spot=(Button)view.findViewById(R.id.btn_spot);
+        btn_livetracking=(Button)view.findViewById(R.id.btn_livetracking);
+        btn_livetracking.setOnClickListener(this);
+        btn_spot.setOnClickListener(this);
         return view;
     }
 
@@ -89,9 +93,10 @@ public class Spot_Creation_Step1Fragment extends Fragment implements View.OnClic
 //                Bundle bundle=new Bundle();
 //                bundle.putString("isshow", "0");
 //
-                Spot_Creation_Step2Fragment f = new Spot_Creation_Step2Fragment();
-                //  f.setArguments(bundle);
-                ((HomeActivity) getActivity()).loadFragment(f, true, false);
+
+                Spot_Creation_Step2Fragment f=new Spot_Creation_Step2Fragment();
+              //  f.setArguments(bundle);
+                ((HomeActivity) getActivity()).loadFragment(f, true,false);
 
                 break;
             case R.id.btn_priest:

@@ -1,6 +1,7 @@
 package txlabz.com.geoconfess;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,9 +13,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -27,7 +35,7 @@ import txlabz.com.geoconfess.web.AppApiController;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
+    private ListView left_drawer;
     private ActionBarDrawerToggle mDrawerToggle;
     private ImageView icon_back;
     private LinearLayout indisponsilble;
@@ -38,6 +46,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        left_drawer=(ListView)findViewById(R.id.left_drawer);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.setDrawerShadow(null,
                 GravityCompat.START);
@@ -49,6 +59,25 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         footer=(ImageView)findViewById(R.id.footer);
         indisponsilble.setOnClickListener(this);
         indisponsilblegreen=(LinearLayout)findViewById(R.id.indisponsilblegreen);
+        List<HashMap<String, String>> fillMaps = new ArrayList<HashMap<String, String>>();
+        HashMap<String,String>map=new HashMap<>();
+        map.put("item","Log Out");
+        fillMaps.add(map);
+        String[] from = new String[] {"item"};
+        int[] to = new int[] {  android.R.id.text1};
+
+        SimpleAdapter adapter = new SimpleAdapter(this, fillMaps, android.R.layout.simple_expandable_list_item_2, from, to);
+        left_drawer.setAdapter(adapter);
+        left_drawer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Utils.saveDataString("token","",HomeActivity.this);
+
+                Intent intent=new Intent(HomeActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         initHomeFragment();
     }
 
@@ -130,9 +159,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
+
+
+
     @Override
     public void onBackPressed() {
         FragmentManager manager = getSupportFragmentManager();
+
+
+
+
+
+
         if(manager.getBackStackEntryCount() == 1 ) {
 //                unlockDrawer();
 

@@ -7,45 +7,44 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:padding="10dp"
-android:id="@+id/mainlayout"
+        android:id="@+id/mainlayout"
         android:background="@color/colorPrimary"
         android:gravity="center_vertical"
         >
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:layout_alignParentLeft="true"
-
-    >
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            style="@style/AppTheme.Widget.TextView"
-            android:textSize="20dp"
-            android:id="@+id/spotname"
-            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:textSize="12dp"
-        android:id="@+id/spottime"
-        android:textColor="@android:color/white"
-        style="@style/AppTheme.Widget.TextView"
 
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+            >
 
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ÉGLISE SAINT-JEAN"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                style="@style/AppTheme.Widget.TextView"
+                android:textSize="20dp"
+                android:id="@+id/spotname"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13h-15h,Lu,Ma"
+                android:textSize="12dp"
+                android:id="@+id/spottime"
+                android:textColor="@android:color/white"
+                style="@style/AppTheme.Widget.TextView"
+                android:layout_alignBottom="@+id/imageView4"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3" />
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -56,17 +55,17 @@ android:id="@+id/mainlayout"
             >
 
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-android:layout_marginEnd="10dp"
-            android:id="@+id/edit"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/pencilwhite"
-            android:layout_below="@+id/textView3"
-            android:layout_toLeftOf="@+id/imageView3"
-            android:layout_toStartOf="@+id/imageView3" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/edit"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/pencilwhite"
+                android:layout_below="@+id/textView3"
+                android:layout_toLeftOf="@+id/imageView3"
+                android:layout_toStartOf="@+id/imageView3" />
 
             <ImageView
                 android:layout_width="30dp"

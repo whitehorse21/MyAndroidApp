@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog = CustomProgressDialog.ctor(this);
         backButton=(ImageView)findViewById(R.id.icon_back);
         backButton.setOnClickListener(this);
+
         initLoginFragment();
     }
 

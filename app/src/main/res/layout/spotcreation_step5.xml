@@ -18,248 +18,262 @@
 
         />
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:id="@+id/line2"
-      android:layout_marginTop="20dp"
-      android:gravity="center"
-      android:layout_below="@+id/headertext"
-
-
-      >
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/line2"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/headertext"
+
+
         >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
             >
 
-
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/checkbox"
-                >
-            </ImageView>
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lundi"
-                android:textSize="18dp"
-                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/checkspace1"
                 >
 
-            </TextView>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check1"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lundi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
 
 
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/checkspace2"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check2"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mercedi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/checkspace3"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check3"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vendredi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/checkspace4"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check4"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dimanche"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
 
 
 
         </LinearLayout>
-
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
             >
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/checkbox"
-                >
-            </ImageView>
-            <TextView
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mercedi"
-                android:textSize="18dp"
-                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/checkspace5"
                 >
 
-            </TextView>
-        </LinearLayout>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check5"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mardi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/checkbox"
-                >
-            </ImageView>
-            <TextView
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vendredi"
-                android:textSize="18dp"
-                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/checkspace6"
                 >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/check6"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jeudi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
 
-            </TextView>
-        </LinearLayout>
+                </TextView>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/checkbox"
-                >
-            </ImageView>
-            <TextView
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dimanche"
-                android:textSize="18dp"
-                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/checkspace7"
                 >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/checkbox"
+                    android:id="@+id/check7"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Samedi"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
 
-            </TextView>
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+
+
         </LinearLayout>
-
-
 
     </LinearLayout>
-      <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-          android:paddingLeft="20dp"
-          >
-
-          <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              >
-
-
-              <ImageView
-                  android:layout_width="15dp"
-                  android:layout_height="15dp"
-                  android:layout_gravity="center_vertical"
-                  android:src="@drawable/checkbox"
-                  >
-              </ImageView>
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Mardi"
-                  android:textSize="18dp"
-                  android:layout_marginLeft="10dp"
-                  >
-
-              </TextView>
-
-
-
-
-
-          </LinearLayout>
-
-
-
-          <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:layout_marginTop="10dp"
-              >
-              <ImageView
-                  android:layout_width="15dp"
-                  android:layout_height="15dp"
-                  android:layout_gravity="center_vertical"
-                  android:src="@drawable/checkbox"
-                  >
-              </ImageView>
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Jeudi"
-                  android:textSize="18dp"
-                  android:layout_marginLeft="10dp"
-                  >
-
-              </TextView>
-          </LinearLayout>
-
-
-          <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:layout_marginTop="10dp"
-              >
-              <ImageView
-                  android:layout_width="15dp"
-                  android:layout_height="15dp"
-                  android:layout_gravity="center_vertical"
-                  android:src="@drawable/checkbox"
-                  >
-              </ImageView>
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Samedi"
-                  android:textSize="18dp"
-                  android:layout_marginLeft="10dp"
-                  >
-
-              </TextView>
-          </LinearLayout>
-
-          <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:layout_marginTop="10dp"
-              >
-              <ImageView
-                  android:layout_width="15dp"
-                  android:layout_height="15dp"
-                  android:layout_gravity="center_vertical"
-                  >
-              </ImageView>
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textSize="18dp"
-                  android:layout_marginLeft="10dp"
-                  >
-
-              </TextView>
-          </LinearLayout>
-
-
-
-      </LinearLayout>
-
-  </LinearLayout>
 
     <LinearLayout
 
@@ -286,6 +300,7 @@
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:text="12"
+            android:id="@+id/fromhour"
             android:gravity="center"
             android:background="#d3d3d3"
             android:textColor="@color/white"
@@ -294,6 +309,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop1"
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -310,6 +326,7 @@
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:text="30"
+            android:id="@+id/fromminute"
             android:gravity="center"
             android:background="#d3d3d3"
             android:textColor="@color/white"
@@ -318,6 +335,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop2"
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -351,7 +369,7 @@
             android:text="12"
             android:gravity="center"
             android:background="#d3d3d3"
-            android:id="@+id/textView2"
+            android:id="@+id/tohour"
             android:textColor="@color/white"
             />
         <ImageView
@@ -359,6 +377,7 @@
             android:layout_height="25dp"
             android:scaleType="fitXY"
             android:src="@drawable/dropdownarrow"
+            android:id="@+id/drop3"
             >
         </ImageView>
         <TextView
@@ -377,6 +396,7 @@
             android:layout_height="25dp"
             android:text="30"
             android:gravity="center"
+            android:id="@+id/tominute"
             android:background="#d3d3d3"
             android:textColor="@color/white"
             />
@@ -384,6 +404,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop4"
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>

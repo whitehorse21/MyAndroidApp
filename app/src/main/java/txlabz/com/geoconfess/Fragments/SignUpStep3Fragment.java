@@ -465,5 +465,4 @@ public class SignUpStep3Fragment extends Fragment implements View.OnClickListene
         return null;
     }
 
-
 }
