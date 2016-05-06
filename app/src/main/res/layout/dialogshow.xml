@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spotname"
+        android:hint="Enter Spot Name"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="OK"
+
+            android:id="@+id/ok"
+            android:layout_marginRight="1dp"
+            android:textColor="@color/white"
+            android:background="@drawable/jre_btn_selector"
+            >
+        </Button>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:background="@drawable/jre_btn_selector"
+
+            android:textColor="@color/white"
+
+            >
+        </Button>
+
+
+    </LinearLayout>
+</LinearLayout>

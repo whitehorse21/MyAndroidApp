@@ -9,6 +9,9 @@
 
     <color name="white">#ffffff</color>
     <color name="whitegrey">#f0f0f0</color>
+    #5e6669
+
+    <color name="lightgray"> #5e6669</color>
 
     <color name="red">#cd4132</color>
     <color name="darkRed">#d25446</color>
@@ -18,5 +21,8 @@
 
 
     <color name="google_red">#BF2C26</color>
+
+    <color name="dark_grey">#a7a7a7</color>
+
     <color name="facebook_blue">#263E7A</color>
 </resources>

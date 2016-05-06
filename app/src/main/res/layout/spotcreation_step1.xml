@@ -33,7 +33,7 @@
         android:id="@+id/btn_spot"
         style="@style/AppTheme.Widget.Button.adventpro"
         android:layout_marginTop="20dp"
-        android:background="@color/shadedBlue"
+        android:background="@drawable/jre_btn_selector"
         android:text="JE RESTE AU MÉME ENDROIT"
         android:layout_below="@+id/lbl_signup_header"
         android:layout_alignParentLeft="true"

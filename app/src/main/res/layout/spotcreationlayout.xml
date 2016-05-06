@@ -18,7 +18,7 @@ android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
 
-        android:background="#a7a7a7"
+        android:background="@drawable/linear_btn_selector"
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

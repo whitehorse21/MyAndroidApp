@@ -67,4 +67,7 @@ public class Spot_Creation_Step2Fragment extends Fragment implements View.OnClic
         }
     }
 
+
+
+
 }

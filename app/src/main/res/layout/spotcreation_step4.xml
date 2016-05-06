@@ -10,7 +10,7 @@ android:background="#f1f1f1"
 
 
     <Button
-        android:id="@+id/btn_spot"
+        android:id="@+id/btn_tostep5"
         style="@style/AppTheme.Widget.Button.adventpro"
         android:layout_marginTop="40dp"
         android:background="@color/colorPrimary"
@@ -27,14 +27,16 @@ android:background="#f1f1f1"
         android:text="ou"
         android:layout_marginTop="15dp"
         android:textSize="@dimen/font_size_medium_3"
-        android:layout_below="@+id/btn_spot"
+        android:layout_below="@+id/btn_tostep5"
         />
-    <Button
-        android:id="@+id/btn_livetracking"
+    <TextView
+        android:id="@+id/date"
         style="@style/AppTheme.Widget.Button.adventpro"
         android:layout_marginTop="15dp"
-        android:text="Date"
         android:textSize="18sp"
+        android:hint="Date"
+        android:textColor="@android:color/white"
+      android:textColorHint="@android:color/white"
         android:background="#f6afb2"
         android:padding="10dp"
         android:gravity="start|center_vertical"
@@ -46,7 +48,7 @@ android:background="#f1f1f1"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="40dp"
-        android:layout_below="@+id/btn_livetracking"
+        android:layout_below="@+id/date"
         android:id="@+id/linear"
         >
 
@@ -64,6 +66,7 @@ android:background="#f1f1f1"
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:text="12"
+            android:id="@+id/fromhour"
             android:gravity="center"
             android:background="#d3d3d3"
             android:textColor="@color/white"
@@ -72,6 +75,7 @@ android:background="#f1f1f1"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop1"
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -88,6 +92,7 @@ android:background="#f1f1f1"
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:text="30"
+            android:id="@+id/fromminute"
             android:gravity="center"
             android:background="#d3d3d3"
             android:textColor="@color/white"
@@ -96,6 +101,8 @@ android:background="#f1f1f1"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop2"
+
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -129,13 +136,15 @@ android:background="#f1f1f1"
             android:text="12"
             android:gravity="center"
             android:background="#d3d3d3"
-            android:id="@+id/textView2"
+            android:id="@+id/tohour"
             android:textColor="@color/white"
             />
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop3"
+
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -155,6 +164,7 @@ android:background="#f1f1f1"
             android:layout_height="25dp"
             android:text="30"
             android:gravity="center"
+            android:id="@+id/tominute"
             android:background="#d3d3d3"
             android:textColor="@color/white"
             />
@@ -162,6 +172,8 @@ android:background="#f1f1f1"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop4"
+
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>

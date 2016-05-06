@@ -321,6 +321,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop1"
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -346,6 +347,8 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop2"
+
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
@@ -386,7 +389,9 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
-            android:src="@drawable/dropdownarrow"
+        android:id="@+id/drop3"
+
+        android:src="@drawable/dropdownarrow"
             >
         </ImageView>
         <TextView
@@ -413,6 +418,8 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
+            android:id="@+id/drop4"
+
             android:src="@drawable/dropdownarrow"
             >
         </ImageView>
